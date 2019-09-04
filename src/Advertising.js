@@ -77,7 +77,7 @@ export default class Advertising {
         ]);
         this.slots = {};
         this.gptSizeMappings = {};
-        this.queue = {};
+        this.queue = [];
     }
 
     activate(id, customEventHandlers = {}) {
