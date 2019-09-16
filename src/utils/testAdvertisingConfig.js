@@ -1,4 +1,5 @@
 export const DIV_ID_OOP = 'div-gpt-ad-oop';
+export const GLOBAL_AD_UNIT_PATH = 'global/ad/unit/path';
 
 export const DIV_ID_FOO = 'div-gpt-ad-foo';
 const SLOT_ID_FOO = 666;
@@ -15,7 +16,6 @@ const COLLAPSE_EMPTY_DIV = [true, true];
 
 const GPT_SIZES = ['fluid', [320, 240]];
 
-const GLOBAL_AD_UNIT_PATH = 'global/ad/unit/path';
 const SLOT_AD_UNIT_PATH = 'slot/ad/unit/path';
 const USD_TO_EUR_RATE = 2;
 

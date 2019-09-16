@@ -1,6 +1,6 @@
 import Advertising from './Advertising';
 import { stub, spy } from 'sinon';
-import { config, DIV_ID_BAR, DIV_ID_FOO } from './utils/testAdvertisingConfig';
+import { config, DIV_ID_BAR, DIV_ID_FOO, GLOBAL_AD_UNIT_PATH } from './utils/testAdvertisingConfig';
 
 const GPT_SIZE_MAPPING = [[[0, 0], []], [[320, 700], [[300, 250], [320, 50]]], [[1050, 200], []]];
 
@@ -276,7 +276,10 @@ describe('When I instantiate an advertising main module with outOfPageSlots', ()
         originalGoogletag = setupGoogletag();
 
         outOfPageSlotsConfig = { ...config };
-        outOfPageSlotsConfig.outOfPageSlots = [{ id: 'outOfPageSlot1' }, { id: 'outOfPageSlot2' }];
+        outOfPageSlotsConfig.outOfPageSlots = [
+            { id: 'outOfPageSlot1', path: GLOBAL_AD_UNIT_PATH },
+            { id: 'outOfPageSlot2', path: GLOBAL_AD_UNIT_PATH }
+        ];
 
         advertising = new Advertising(outOfPageSlotsConfig);
     });
